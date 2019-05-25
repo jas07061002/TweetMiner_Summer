@@ -1,0 +1,7 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jasmi\Downloads\TweetAnalytics Summer\test\resources\authtoken.json,C:\Users\jasmi\Downloads\TweetAnalytics Summer\target\scala-2.12\test-classes\authtoken.json)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jasmi\Downloads\TweetAnalytics Summer\test\resources\result_search_happy.json,C:\Users\jasmi\Downloads\TweetAnalytics Summer\target\scala-2.12\test-classes\result_search_happy.json)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jasmi\Downloads\TweetAnalytics Summer\test\resources\result_search_neutral.json,C:\Users\jasmi\Downloads\TweetAnalytics Summer\target\scala-2.12\test-classes\result_search_neutral.json)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jasmi\Downloads\TweetAnalytics Summer\test\resources\result_search_sad.json,C:\Users\jasmi\Downloads\TweetAnalytics Summer\target\scala-2.12\test-classes\result_search_sad.json)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jasmi\Downloads\TweetAnalytics Summer\test\resources\result_tweets.json,C:\Users\jasmi\Downloads\TweetAnalytics Summer\target\scala-2.12\test-classes\result_tweets.json)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\jasmi\Downloads\TweetAnalytics Summer\test\resources\user.json,C:\Users\jasmi\Downloads\TweetAnalytics Summer\target\scala-2.12\test-classes\user.json)[0m

@@ -1,0 +1,114 @@
+@(userProfileAndTweets: UserTweet_Object)
+
+@main("Profile") {
+<div class="demo-only" style="height: 4rem;">
+	<div class="slds-notify_container slds-is-relative">
+		<div class="slds-notify slds-notify_toast slds-theme_success" role="alert">
+
+
+			<div class="slds-notify__content">
+				<h2 class="slds-text-heading_small ">User Profile Info for @userProfileAndTweets.userProfile.name</h2>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="container mt-3">
+	<div class="media bg-success-light  rounded">
+		<div class="media-body">
+			<div class="row">
+				<div class="col">
+					<div class="display-4">@userProfileAndTweets.userProfile.name</div>
+				</div>
+			</div>
+			<div class="row p-2">
+				<div class="col">
+					<h5>@@ @userProfileAndTweets.userProfile.screen_name</h5>
+				</div>
+				<div class="col-auto">
+					<h5>Created: &nbsp; &nbsp; @userProfileAndTweets.userProfile.created_at</h5>
+				</div>
+			</div>
+			<div class="row p-2">
+				<div class="col">
+					<h3>@userProfileAndTweets.userProfile.description</h3>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col text-center">
+					<h5>Tweets</h5>
+				</div>
+				<div class="col text-center">
+					<h5>Following</h5>
+				</div>
+				<div class="col text-center">
+					<h5>Followers</h5>
+				</div>
+				<div class="col text-center">
+					<h5>Likes</h5>
+				</div>
+			</div>
+			<div class="row mb-1">
+				<div class="col text-center">
+					<h5>@userProfileAndTweets.userProfile.statuses_count</h5>
+				</div>
+				<div class="col text-center">
+					<h5>@userProfileAndTweets.userProfile.friends_count</h5>
+				</div>
+				<div class="col text-center">
+					<h5>@userProfileAndTweets.userProfile.followers_count</h5>
+				</div>
+				<div class="col text-center">
+					<h5>@userProfileAndTweets.userProfile.favourites_count</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<ul class="list-unstyled">
+		@for(tweet <- userProfileAndTweets.tweets){
+
+
+		<article class="slds-card">
+			<div class="slds-card__header slds-grid">
+				<header class="slds-media slds-media_center slds-has-flexi-truncate">
+
+					<div class="slds-media__body">
+						<small class="text-muted"><h6>@tweet.created_at</h6></small>
+
+					</div>
+				</header>
+			</div>
+			<div class="slds-card__body slds-card__body_inner">
+
+				<div class="row p-2">
+					<div class="col">
+						@tweet.full_text
+
+						<br/>
+
+					</div>
+
+				</div>
+
+			</div>
+			<footer class="slds-card__footer">
+
+				HastTags -
+				@for( (Hash) <- tweet.entities.hashtags ){
+				<a
+						href="@routes.TweetController.HashTagTweets(Hash.text)"
+						class="btn btn-link" role="button" target="_blank">@Hash.text</a>
+				}
+			</footer>
+		</article>
+
+
+
+		}
+	</ul>
+</div>
+}

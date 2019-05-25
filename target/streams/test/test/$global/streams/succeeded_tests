@@ -1,0 +1,11 @@
+#Successful Tests
+#Sat Aug 11 23:55:25 EDT 2018
+services.FetchTweetsServiceTest_Neutral=1534046114995
+services.FetchUserProfileServiceTest=1534046118068
+services.TwitterAuth2_0ServiceTest=1534046123353
+controllers.TwitterControllerTest=1534046117334
+services.FetchTweetsServiceTest_Happy=1534046123868
+controllers.WebSocketTweetControllerTest=1534046122759
+models.modelsTest=1534046122775
+services.FetchLocationTweetsServiceTest=1534046124384
+services.FetchTweetsServiceTest_Sad=1534046114124

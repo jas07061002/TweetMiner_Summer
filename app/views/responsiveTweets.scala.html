@@ -1,0 +1,97 @@
+@(webJarsUtil: org.webjars.play.WebJarsUtil)
+
+@main("ResponsiveTweetSearch") {
+<div class="container">
+    <div class="input-group mt-3 mb-3">
+
+        <input id="searchword" type="text" class="slds-input" name="searchString" placeholder="enter search term"
+        >
+        <div class="input-group-append">
+            <button id="submit" class="slds-button slds-button_brand" type="submit">submit</button>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="body">
+    <!-- This container would be filled by script below -->
+</div>
+
+@Html(webJarsUtil.script("jquery.min.js"))
+
+<script language="javascript">
+                var Socketconnection = new WebSocket("@routes.WebSocketTweetController.WSsocket().webSocketURL()"),
+                        userProfileUrl = "@routes.TweetController.userProfile("").url";
+
+                var submit = function () {
+                    var word = $("#searchword").val();
+                    var searchKey = {
+                        keyword : ''
+                    };
+                    searchKey.keyword = word;
+                    Socketconnection.send(JSON.stringify(searchKey));
+                };
+
+                Socketconnection.onopen = function () {
+                    $("#submit").on('click', submit);
+                };
+
+                Socketconnection.onmessage = function (event) {
+                    var tweetsForWord = JSON.parse(event.data);
+
+                    var show = "show";
+                    if (Object.keys(tweetsForWord).length > 1) {
+                        show = "";
+                    }
+                    for (var tweets in tweetsForWord) {
+						var keyPhraseId = tweets.split('--')
+                        toAppend ='';
+                        if (document.getElementById(keyPhraseId[0]) == null) {
+                            var toAppend = '<hr>';
+                            toAppend += '<div class="demo-only" style="height: 4rem;"> <div class="slds-notify_container slds-is-relative"> <div class="slds-notify slds-notify_toast slds-theme_success" role="alert">';
+							toAppend +=  '<div class="slds-notify__content"> <h2 class="slds-text-heading_small ">Result of  <a href="http://localhost:9000/wordstat/' + keyPhraseId[0] + '" class="btn btn-link" role="button" target="_blank">' + tweets + '</a> </h2> ';
+							toAppend += '</div> </div> </div> </div> <div id="' +keyPhraseId[0] + '" > </div>';
+
+                        for (var el in tweetsForWord[tweets]) {
+
+							 toAppend += '<article class="slds-card"> <div class="slds-card__header slds-grid"> <header class="slds-media slds-media_center slds-has-flexi-truncate"> <div class="slds-media__body"> <h2 class="slds-card__header-title"> <a href="http://localhost:9000/profile/' + tweetsForWord[tweets][el].user.screen_name + '" class="btn btn-link" role="button" target="_blank">' + tweetsForWord[tweets][el].user.name + '</a> </h2>';
+							 if(tweetsForWord[tweets][el].geo != null && tweetsForWord[tweets][el].user.location != ""){
+							toAppend +=  'Location -  <a href="http://localhost:9000/location/' + tweetsForWord[tweets][el].geo.LatLong + tweetsForWord[tweets][el].geo.SearchTerm + '" class="btn btn-link" role="button" target="_blank">' + tweetsForWord[tweets][el].user.location + '</a> Lat Long - ' + tweetsForWord[tweets][el].geo.LatLong;
+							}
+							toAppend += '<br/> <br/> ' + tweetsForWord[tweets][el].created_at;
+							toAppend += '</div> </header> </div> <div class="slds-card__body slds-card__body_inner"> <div class="row p-2"> <div class="col">';
+							toAppend += tweetsForWord[tweets][el].full_text;
+							toAppend += '<br/> </div> </div> </div> <footer class="slds-card__footer">';
+							toAppend += 'HastTags -';
+							for( var has in tweetsForWord[tweets][el].entities.hashtags ){
+							toAppend += '<a href="http://localhost:9000/hashtag/' + tweetsForWord[tweets][el].entities.hashtags[has].text + '" class="btn btn-link" role="button" target="_blank">' + tweetsForWord[tweets][el].entities.hashtags[has].text + '</a>';
+							}
+							toAppend += '</footer> </article>';
+                        }
+
+
+
+                            $("#body").prepend($(toAppend));
+                        } else {
+                            for (var el in tweetsForWord[tweets]) {
+                            var toAppend = '';
+							 toAppend += '<article class="slds-card"> <div class="slds-card__header slds-grid"> <header class="slds-media slds-media_center slds-has-flexi-truncate"> <div class="slds-media__body"> <h2 class="slds-card__header-title"> <a href="http://localhost:9000/profile/' + tweetsForWord[tweets][el].user.screen_name + '" class="btn btn-link" role="button" target="_blank">' + tweetsForWord[tweets][el].user.name + '</a> </h2>';
+							 if(tweetsForWord[tweets][el].geo != null && tweetsForWord[tweets][el].user.location != ""){
+							toAppend +=  'Location -  <a href="http://localhost:9000/location/' + tweetsForWord[tweets][el].geo.LatLong + tweetsForWord[tweets][el].geo.SearchTerm + '" class="btn btn-link" role="button" target="_blank">' + tweetsForWord[tweets][el].user.location + '</a> Lat Long - ' + tweetsForWord[tweets][el].geo.LatLong;
+							}
+							toAppend += '<br/> <br/> ' + tweetsForWord[tweets][el].created_at;
+							toAppend += '</div> </header> </div> <div class="slds-card__body slds-card__body_inner"> <div class="row p-2"> <div class="col">';
+							toAppend += tweetsForWord[tweets][el].full_text;
+							toAppend += '<br/> </div> </div> </div> <footer class="slds-card__footer">';
+							toAppend += 'HastTags -';
+							for( var has in tweetsForWord[tweets][el].entities.hashtags ){
+							toAppend += '<a href="http://localhost:9000/hashtag/' + tweetsForWord[tweets][el].entities.hashtags[has].text + '" class="btn btn-link" role="button" target="_blank">' + tweetsForWord[tweets][el].entities.hashtags[has].text + '</a>';
+							}
+							toAppend += '</footer> </article>';
+                        }
+                            document.getElementById(keyPhraseId[0]).innerHTML = toAppend;
+                        }
+                    }
+
+                }
+        </script>
+}

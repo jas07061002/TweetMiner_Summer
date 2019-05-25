@@ -1,0 +1,15 @@
+
+GET         /                                        controllers.TweetController.index()
++ nocsrf
+POST        /                                        controllers.TweetController.search()
+GET         /profile/:userName                       controllers.TweetController.userProfile(userName: String)
+GET         /location/:location                       controllers.TweetController.locationTweets(location: String)
+GET         /hashtag/:hashtag                       controllers.TweetController.HashTagTweets(hashtag: String)
+GET         /wordstat/:wordstat                       controllers.TweetController.WordStat(wordstat: String)
+
+GET         /responsive                              controllers.WebSocketTweetController.index
+GET         /responsive/WSsocket                    controllers.WebSocketTweetController.WSsocket
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                            controllers.Assets.versioned(path="/public", file: Asset)
+->          /webjars                                 webjars.Routes

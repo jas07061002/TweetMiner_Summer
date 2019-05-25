@@ -1,0 +1,38 @@
+{
+  "statuses": [
+    {
+      "created_at": " 27th  July 2018 10:00 AM ",
+      "full_text": " Montreal Cafe :-(",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          40.74118764,
+          -73.9998279
+        ]
+      }
+    },
+    {
+      "created_at": " 27th  July 2018 10:00 AM ",
+      "full_text": " Montreal in Cafe :( ",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          40.74118764,
+          -73.9998279
+        ]
+      }
+    },
+    {
+      "created_at": " 27th  July 2018 10:00 AM ",
+      "full_text": " Montreal best Cafe :(( ",
+      "geo": {
+        "type": "Point",
+        "coordinates": [
+          40.74118764,
+          -73.9998279
+        ]
+      }
+    }
+  ]
+}
+

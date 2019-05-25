@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+    float: left;
+    width: 98%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.column2 {
+    float: right;
+    width: 30%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.questions {
+    float: right;
+        width: 1085px;
+    padding: 10px;
+	height: 800px;
+}
+
+.section {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

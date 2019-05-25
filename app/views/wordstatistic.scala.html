@@ -1,0 +1,30 @@
+@(wordstat: Map[String, List[Tweet_Object]])
+<h1 class="slds-text-align_center" style="color: green; font-weight:bold; font-size:50">Word Count Statistics</h1>
+@main("wordstat") {
+<table class="slds-table slds-table_bordered slds-table_cell-buffer" align="center" style="width: 45%;">
+	<thead>
+	<tr class="slds-text-title_caps">
+		<th scope="col" class="slds-cell-shrink">
+			<div class="slds-truncate" title="Words" align="center"><a href="javascript:void(0);">WORDS</a></div>
+		</th>
+		<th scope="col" class="slds-cell-shrink">
+			<div class="slds-truncate" title="Count" align="center"><a href="javascript:void(0);">TOTAL COUNT</a></div>
+		</th>
+	</tr>
+	</thead>
+	@for( (word, tweets) <- wordstat ){
+	@for(tweet <- tweets){
+	<tbody>
+	<tr>
+		<td data-label="Words">
+			<div class="slds-truncate" align="center">@word</div>
+		</td>
+		<td data-label="Count">
+			<div class="slds-truncate" align="center">@tweet.WordStat</div>
+		</td>
+	</tr>
+	</tbody>
+	}
+	}
+</table>
+}

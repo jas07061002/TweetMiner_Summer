@@ -1,0 +1,86 @@
+@(searchForm: Form[String])(tweetsForWord: Map[String, List[Tweet_Object]])
+
+@main("TweetSearch") {
+<div class="container">
+    <form action="@routes.TweetController.index()" method="POST">
+            <br/>
+            <input type="text" class="slds-input" name="searchString" placeholder="enter search term"
+                  >
+        <br/> <br/>
+                <input class="slds-button slds-button_brand" style="margin-left:50%" type="submit" value="Submit">
+    </form>
+</div>
+
+@if(tweetsForWord != null){
+<div class="container">
+    @for( (word, tweets) <- tweetsForWord ){
+    <hr>
+    <div class="demo-only" style="height: 4rem;">
+        <div class="slds-notify_container slds-is-relative">
+            <div class="slds-notify slds-notify_toast slds-theme_success" role="alert">
+
+
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small ">Result of  <a
+                            href="@routes.TweetController.WordStat(word)"
+                            class="btn btn-link" role="button" target="_blank">@word</a></h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @for(tweet <- tweets){
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <a
+                                href="@routes.TweetController.userProfile(tweet.user.screen_name)"
+                                class="btn btn-link" role="button" target="_blank">@tweet.user.name</a>
+                    </h2>
+
+
+
+                    @if(tweet.geo != null && tweet.user.location != ""){
+
+                    Location -  <a
+                        href="@routes.TweetController.locationTweets(tweet.geo.LatLong + tweet.geo.SearchTerm)"
+                        class="btn btn-link" role="button" target="_blank">@tweet.user.location</a>
+                    Lat Long - @tweet.geo.LatLong
+                    }
+
+                    @tweet.created_at
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+
+            <div class="row p-2">
+                <div class="col">
+                    @tweet.full_text
+
+                    <br/>
+
+                </div>
+
+            </div>
+
+        </div>
+        <footer class="slds-card__footer">
+
+            HastTags -
+            @for( (Hash) <- tweet.entities.hashtags ){
+            <a
+                    href="@routes.TweetController.HashTagTweets(Hash.text)"
+                    class="btn btn-link" role="button" target="_blank">@Hash.text</a>
+
+            }
+        </footer>
+    </article>
+    }
+
+    }
+</div>
+} }

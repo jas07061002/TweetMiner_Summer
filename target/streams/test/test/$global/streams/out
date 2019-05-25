@@ -1,0 +1,89 @@
+[0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector(-Djacoco-agent.destfile=C:\Users\dhbhalodi\Desktop\Concordia Project\APP\TweetAnalytics Summer\target\scala-2.12\jacoco\data\jacoco.exec)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for org.scalatest.tools.Framework produced 0 initial tasks for 0 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 9 initial tasks for 9 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(services.FetchTweetsServiceTest_Sad, sbt.ForkMain$AnnotatedFingerscan@1ba49c7c, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest services.[33mFetchTweetsServiceTest_Sad[0m.[36mtestFetchTweetsfromAPI[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest services.[33mFetchTweetsServiceTest_Sad[0m.[36mtestFetchTweetsfromAPI[0m finished, took 9.459 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 9.474s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(services.FetchTweetsServiceTest_Neutral, sbt.ForkMain$AnnotatedFingerscan@501918a1, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest services.[33mFetchTweetsServiceTest_Neutral[0m.[36mtestFetchTweetsfromAPI[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest services.[33mFetchTweetsServiceTest_Neutral[0m.[36mtestFetchTweetsfromAPI[0m finished, took 0.887 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.887s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(controllers.TwitterControllerTest, sbt.ForkMain$AnnotatedFingerscan@a71fcf3, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest controllers.[33mTwitterControllerTest[0m.[36mtestHashTagController[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest controllers.[33mTwitterControllerTest[0m.[36mtestHashTagController[0m finished, took 0.093 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest controllers.[33mTwitterControllerTest[0m.[36mtestLocationTweetController[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest controllers.[33mTwitterControllerTest[0m.[36mtestLocationTweetController[0m finished, took 0.105 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest controllers.[33mTwitterControllerTest[0m.[36mtestIndex[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest controllers.[33mTwitterControllerTest[0m.[36mtestIndex[0m finished, took 0.016 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest controllers.[33mTwitterControllerTest[0m.[36mtestWordstatController[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest controllers.[33mTwitterControllerTest[0m.[36mtestWordstatController[0m finished, took 0.015 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest controllers.[33mTwitterControllerTest[0m.[36mtestuserProfileController[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest controllers.[33mTwitterControllerTest[0m.[36mtestuserProfileController[0m finished, took 0.016 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest controllers.[33mTwitterControllerTest[0m.[36mtestSearchController[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest controllers.[33mTwitterControllerTest[0m.[36mtestSearchController[0m finished, took 0.015 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 6 total, 2.292s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 6 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(services.FetchUserProfileServiceTest, sbt.ForkMain$AnnotatedFingerscan@1df535a8, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest services.[33mFetchUserProfileServiceTest[0m.[36mtestFetchTweetsfromAPI[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest services.[33mFetchUserProfileServiceTest[0m.[36mtestFetchTweetsfromAPI[0m finished, took 0.718 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.718s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(controllers.WebSocketTweetControllerTest, sbt.ForkMain$AnnotatedFingerscan@c1c9c54, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest controllers.[33mWebSocketTweetControllerTest[0m.[36mwebsocket_success[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest controllers.[33mWebSocketTweetControllerTest[0m.[36mwebsocket_success[0m finished, took 3.722 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest controllers.[33mWebSocketTweetControllerTest[0m.[36mindex_success[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest controllers.[33mWebSocketTweetControllerTest[0m.[36mindex_success[0m finished, took 0.938 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 4.66s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 2 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(models.modelsTest, sbt.ForkMain$AnnotatedFingerscan@44b4a02a, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest models.[33mmodelsTest[0m.[36mtestmodel[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest models.[33mmodelsTest[0m.[36mtestmodel[0m finished, took 0.0 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.0s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(services.TwitterAuth2_0ServiceTest, sbt.ForkMain$AnnotatedFingerscan@21e5be92, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest services.[33mTwitterAuth2_0ServiceTest[0m.[36mtestFetchTweetsfromAPI[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest services.[33mTwitterAuth2_0ServiceTest[0m.[36mtestFetchTweetsfromAPI[0m finished, took 0.578 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.578s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(services.FetchTweetsServiceTest_Happy, sbt.ForkMain$AnnotatedFingerscan@21e83f88, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest services.[33mFetchTweetsServiceTest_Happy[0m.[36mtestFetchTweetsfromAPI[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest services.[33mFetchTweetsServiceTest_Happy[0m.[36mtestFetchTweetsfromAPI[0m finished, took 0.499 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.499s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(services.FetchLocationTweetsServiceTest, sbt.ForkMain$AnnotatedFingerscan@5c3393c, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0minfo[0m] [0m[0mTest services.[33mFetchLocationTweetsServiceTest[0m.[36mtestFetchLocationTweetsfromAPI[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest services.[33mFetchLocationTweetsServiceTest[0m.[36mtestFetchLocationTweetsfromAPI[0m finished, took 0.5 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.516s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0minfo[0m] [0m[0mScalaTest[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 27 seconds, 304 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 0, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[33mNo tests were executed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 15, Failed 0, Errors 0, Passed 15[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	services.FetchTweetsServiceTest_Sad[0m
+[0m[[0m[0mdebug[0m] [0m[0m	services.FetchTweetsServiceTest_Neutral[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers.TwitterControllerTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	services.FetchUserProfileServiceTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers.WebSocketTweetControllerTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models.modelsTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	services.TwitterAuth2_0ServiceTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m	services.FetchTweetsServiceTest_Happy[0m
+[0m[[0m[0mdebug[0m] [0m[0m	services.FetchLocationTweetsServiceTest[0m
